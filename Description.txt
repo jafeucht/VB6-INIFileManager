@@ -1,0 +1,22 @@
+A VB INI file manager -- no API's!!!
+
+Well, actually, there is only one API. The following API calls have been replicated in Visual Basic:
+
+GetPrivateProfileSection
+GetPrivateProfileString
+WritePrivateProfileSection
+WritePrivateProfileString
+
+Now, why replicate these API calls if they're so easy to access with so little code? First and foremost reason: YOU CAN ACCESS LARGER *.INI FILES!!! Unlike the traditional API commands, there is no limit to the size of *.INI file that you can access/create. Second reason: You can easily customize the code to allow multi-line keys (replacing vbCrLf with a /n tag) and to avoid the problem of writing sections inside a section with WritePrivateProfileSection. Thirdly, you can access the INI through direct function rather then having a string be passed ByRef. And the last, but not least, reason: believe it or not, the windows API calls for INI file manipulation lack in speed. These functions are PLENTY times faster then the same functions provided in Kernel32.dll.
+
+If this isn't significant, I've added the following extremely usefull INI functions/commands of my own:
+
+GetPrivateProfileKeys
+GetPrivateProfileSections
+RemovePrivateProfileSection
+RemovePrivateProfileString
+
+Now you can find out very easy which keys are in an *.INI file! A sampler program is included, which allows you to view INI files, their keys and their values. Also, you can delete unwanted sections and keys to help keep your INI file clean and compact!!!
+
+This code is heavily commented, logical, and easy to understand. Try it out today!
+
